@@ -8,6 +8,15 @@
     <link rel="icon" href="img/pokebola.png" type="image/x-icon">
     <!-- Relacionar archivo css -->
     <link href="css/styles.css" rel="stylesheet">
+    <script>
+    function validarInput(input) {
+      // Obtener el valor del input y convertirlo a minúsculas
+      var valor = input.value.toLowerCase();
+      
+      // Eliminar caracteres no permitidos (mayúsculas)
+      input.value = valor.replace(/[^a-z]/g, '');
+    }
+  </script>
 </head>
 <body>
     <div class="titulo">
@@ -80,7 +89,7 @@
                     <div class="contenedor-campos">
                         <div class="campo">
                             <label for="nombre">Nombre:</label>
-                            <input class="input-text" type="text" name="nombre" placeholder="Ingresa nombre del pokemón" required>
+                            <input class="input-text" type="text" name="nombre" placeholder="Ingresa nombre del pokemón" oninput="validarInput(this)" required>
                         </div>
                     </div>
                     
