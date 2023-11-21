@@ -129,9 +129,13 @@ h1, h2, h3{
     border: .5rem solid var(--fondo);
     padding: 20px;
     /* border-radius: 50%; */
-    display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+@media (min-width: 768px){
+    .servicio .iconos{
+        display: flex;
+    }
 }
 
 /*Utilidades*/
