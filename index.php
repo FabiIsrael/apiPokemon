@@ -20,7 +20,7 @@
 </head>
 <body>
     <div class="titulo">
-        <h1><img class="pokebola" src="img/pokebola.png" alt="Pokebolla" width="40" height="40"> API POKEMÓN - Fabian Urcia</h1>
+        <h1><img class="pokebola" src="img/pokebola.png" alt="Pokebolla" width="40" height="40"> API POKEMÓN - Fabian</h1>
     </div>
 
     <main class="contenedor sombra">
