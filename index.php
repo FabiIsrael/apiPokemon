@@ -51,31 +51,38 @@
 
                 $pokemon_data = json_decode($response,true);
 
-                echo '<div class="servicios">';
+                if($pokemon_data == null){
 
-                echo '<section class="servicio">';
-                echo '<h1>'. $pokemon_data['name']. '</h1>';
-                echo '<div class="iconos">';
-                echo '<img src="'. $pokemon_data['sprites']['front_default'].'" alt="'. $pokemon_data['name'].'" width="250" height="250">';
-                echo '<ul>';
-                echo '<li><strong> Nombre: </strong>' .$pokemon_data['name']. '</li>';
-                echo '<li><strong> Altura: </strong>' .$pokemon_data['height']. '</li>';
-                echo '<li><strong> Anchura: </strong>' .$pokemon_data['weight']. '</li>';
-
-                echo '<li><strong> Habilidades: </strong>';
-                echo '<ul>';
-                foreach($pokemon_data['abilities'] as $ability){
-
-                    echo '<li>'. $ability['ability']['name']. '</li>';
-
+                    echo '<h1>Nombre inexistente, intente de nuevo</h1>';
                 }
-                echo '</ul>';
-                echo '</li>';
-                echo '</ul>';
+                else{
+                    echo '<div class="servicios">';
 
-                echo '</div>';
-                echo '</section>';
-                echo '</div>';
+                    echo '<section class="servicio">';
+                    echo '<h1>'. $pokemon_data['name']. '</h1>';
+                    echo '<div class="iconos">';
+                    echo '<img src="'. $pokemon_data['sprites']['front_default'].'" alt="'. $pokemon_data['name'].'" width="250" height="250">';
+                    echo '<ul>';
+                    echo '<li><strong> Nombre: </strong>' .$pokemon_data['name']. '</li>';
+                    echo '<li><strong> Altura: </strong>' .$pokemon_data['height']. '</li>';
+                    echo '<li><strong> Anchura: </strong>' .$pokemon_data['weight']. '</li>';
+
+                    echo '<li><strong> Habilidades: </strong>';
+                    echo '<ul>';
+                    foreach($pokemon_data['abilities'] as $ability){
+
+                        echo '<li>'. $ability['ability']['name']. '</li>';
+
+                    }
+                    echo '</ul>';
+                    echo '</li>';
+                    echo '</ul>';
+
+                    echo '</div>';
+                    echo '</section>';
+                    echo '</div>';
+                }
+
             }
         }
         ?>
